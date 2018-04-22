@@ -27,9 +27,9 @@ for(x in files){
 View(df)
 
 
-p <- ggplot(df, aes(x=date, y=count, group=categoria, color=categoria)) +
+ggplot(df, aes(x=date, y=count, group=categoria, color=categoria)) +
   geom_line()+
   facet_wrap(~ desc_barrio_local)+
   labs(title = "Evolucion comercio Arganzuela, Usera y Centro")+
-  theme(axis.ticks = element_blank(), axis.text.x = element_blank(), legend.position = "none")
-ggplotly(p)
+  theme(axis.ticks = element_blank(), axis.text.x = element_blank(), legend.position = "bottom")  + 
+  labs(x = "Fecha (2015 - 2018)", y = "Total comercios") 
